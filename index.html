@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>Test 2</title>
+</head>
+     <style>
+
+body {
+  margin: 0;
+}
+
+.container {
+  position: relative;
+}
+
+
+
+
+form{
+
+            width: 60%;
+            padding: 15px;
+            margin: 0 auto 0 auto;
+            display: grid;
+            margin-top: 10px;
+            max-width: 100%;
+    background-image: url('roses.jpg');
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-attachment: fixed;
+}
+form input[type="text"]{
+    width: 20%;
+}
+form input[type="password"]{
+    width: 30%;
+}
+form input[type="checkbox"]{
+    width: 30%;
+}
+#countries{
+    width:30%;
+}
+form h1{
+    color: white;
+    text-align: center;
+    font-size: 60px;
+
+}
+form label{
+    color: white;
+    display: flex;
+    align-items:center ;
+
+}
+form input[type="button"]{
+    width: 15%;
+    margin-left: 80%;
+    padding:5px
+}
+#Address{
+    width: 25%;
+    padding-bottom: 10px;
+}
+.Gender{
+    display: block;
+    margin-top: 2px; 
+}
+#g{
+    margin-right: 10px;
+}
+.hobbies{
+    display:inline-block;
+    margin-top: 15px;
+    
+}
+.hobbies label{
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+}
+#h{
+    margin-right: 10px;
+}
+form input[type="file"]{
+    padding:15px;
+    color:white;
+}
+
+
+
+#Name {
+    width:20%;
+    flex: 1;
+
+}
+h5{
+    color:white;
+    border:3px dotted white;
+    border-width: 3px;
+    max-width: 70%;
+    padding: 3px;
+    
+}
+h4{
+    color:white;
+}
+
+     </style>
+</head>
+<body>
+  
+    <div>
+
+
+     <form name="myform">
+       
+        <h5>This is some text in a paragraph.</h5>
+
+        <h5>This is some text in a paragraph.</h5>
+
+
+        <input id="Search" type="text" name="search" placeholder="Search" />
+<br>
+<h1><b>User Registration</b></h1>
+         <label for="name">Name: <input id="Name" type="text" name="name" placeholder="Name" /></label>
+         <br><label for="Email">Email: <input id="Email" type="text" name="Email" placeholder="Email"/></label>
+         <br><label for="Address">Address   <input type="text" id="Address" type="Address" name="p1" placeholder="Address"/></label>
+         <div class="gender">
+         <br>
+            <label>
+            <label id="g">Gender</label>
+
+            Male
+            <input type="radio" name="gender" value="male">
+            Female
+            <input type="radio" name="gender" value="female">
+          </label>
+          <br>
+          <label for="Country" id="countries">Country</label>  
+          <select name="Country" id="countries">
+            <option value="Nigeria">Select</option>
+            <option value="Nigeria">Nigeria</option>
+                </select>
+            
+            </div>
+            <br>
+            <div class="fileUpload">
+              <label for="fileUpload">Upload image:</label>
+              <input type="file" id="fileUpload" name="fileUpload">
+              </div>
+            <br>       
+        
+        <div class="hobbies">
+           <h4>Hobbies</h4>
+          <label>
+            Reading
+            <input type="checkbox" name="hobbies">
+        </label>
+          <label>
+            Travelling
+            <input type="checkbox" name="hobbies" >
+          </label>
+          
+        </div>
+
+        
+        <input type="button" value="register" onclick="validateForm()" >
+  
+    </form>
+</div>
+<script>
+
+function validateForm() {
+
+  var name = document.getElementById('Name').value;
+  var email = document.getElementById('Email').value;
+
+  if (!name || !email) {
+    alert("Enter your details");
+   
+}
+   else {
+    alert(`Thank you for submitting your form, ${name}, we'll get back to you soon! `);
+  }
+}
+function emailvalidate(){
+var getemail =document.getElementById('Email').value;
+
+if(getemail.length>2){
+    alert("email input is greater than 2")
+}
+else{
+    alert("email input is less than 2")
+}
+
+
+}
+</script>
+
+</body>
+</html>
